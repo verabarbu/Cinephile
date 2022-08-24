@@ -1,0 +1,31 @@
+<div class="filmId-container">
+    <div class="film">
+    <div class="film-thumb-container">
+    <img src="https://picsum.photos/800/400"
+    alt="film"
+    class="film-thumbnail"/>
+    </div>
+    <div class="film-description">
+    <h2 class="film-title">{{ film.title }}</h2>
+    <h4 class="unit-title">Description:</h4>
+        <span class="film-desc">{{ film.description }}</span>
+        <h4 class="unit-title">Release Year:</h4>
+        <span class="film-desc">{{ film.releaseYear }}</span>
+        <h4 class="unit-title">Language:</h4>
+        <span class="film-desc">{{ film.languageId }}</span>
+        <h4 class="unit-title">Length:</h4>
+        <span class="film-desc">{{ film.length }} minutes</span>
+        <h4 class="unit-title">Rating:</h4>
+        <span class="film-desc">{{ film.rating }}</span>
+        <h4 class="unit-title">Cast:</h4>
+    <p *ngIf="film.filmActor">
+        <span *ngFor="let actor of film.filmActor; let last = last">{{ [actor.firstName, actor.lastName] }}<span *ngIf="!last"><br> </span></span>
+    </p>
+    <h4 class="unit-title">Categories:</h4>
+    <p *ngIf="film.filmCategory">
+        <span *ngFor="let category of film.filmCategory, let last = last">{{ category.name }}<span *ngId="!last">, </span></span> 
+
+    </p>
+</div>
+</div>
+</div>
