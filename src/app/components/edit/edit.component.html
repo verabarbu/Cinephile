@@ -6,37 +6,37 @@
 
         <div>
             <label class="label" for="title">Title</label><br>
-            <input class="field" type="text" formControlName="title" [(ngModel)]="film.title"><br><br>
+            <input class="field" type="text" formControlName="title" [(ngModel)]="film.title" placeholder="Please enter new title"><br><br>
         </div>
 
         <div>
             <label class="label" for="description">Description</label><br>
-            <input class="field" type="text" formControlName="description" [(ngModel)]="film.description"><br><br>
+            <input class="field" type="text" formControlName="description" [(ngModel)]="film.description" placeholder="Please enter new description"><br><br>
         </div>
 
         <div>
             <label class="label" for="releaseYear">Release year</label><br>
-            <input class="field" type="text" formControlName="releaseYear" [(ngModel)]="film.releaseYear"><br><br>
+            <input class="field" type="text" formControlName="releaseYear" [(ngModel)]="film.releaseYear" placeholder="Please enter new release year"><br><br>
         </div>
 
         <div>
             <label class="label" for="languageId">Language id</label><br>
-            <input class="field" type="text" formControlName="languageId" [(ngModel)]="film.languageId"><br><br>
+            <input class="field" type="text" formControlName="languageId" [(ngModel)]="film.languageId" placeholder="Please enter new language id"><br><br>
         </div>
 
         <div>
             <label class="label" for="originalLanguageId">Original language id</label><br>
-            <input class="field" type="text" formControlName="originalLanguageId" [(ngModel)]="film.originalLanguageId"><br><br>
+            <input class="field" type="text" formControlName="originalLanguageId" [(ngModel)]="film.originalLanguageId" placeholder="Please enter new original language id"><br><br>
         </div>
 
         <div>
             <label class="label" for="length">Length</label><br>
-            <input class="field" type="text" formControlName="length" [(ngModel)]="film.length"><br><br>
+            <input class="field" type="text" formControlName="length" [(ngModel)]="film.length" placeholder="Please enter new length"><br><br>
         </div>
 
         <div>
             <label class="label" for="rating">Rating</label><br>
-            <input class="field" type="text" formControlName="rating" [(ngModel)]="film.rating"><br><br>
+            <input class="field" type="text" formControlName="rating" [(ngModel)]="film.rating" placeholder="Please enter new rating"><br><br>
         </div>
 
         <button type="submit" class="add-btn" (click)="onSubmit()">Submit</button>

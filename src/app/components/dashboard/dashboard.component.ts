@@ -39,4 +39,9 @@ export class DashboardComponent implements OnInit {
   openEdit(id: number): void{
     this.router.navigate(['Edit', id]);
   }
+  removeFilm(id: number): void {
+    this.filmService.deleteFilm(id).subscribe((res) => {
+      this.searchFilms();
+    });
+  }
 }

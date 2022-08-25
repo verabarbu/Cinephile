@@ -53,4 +53,10 @@
     margin-top: 5px;
     margin-bottom: 0px;
 }
-  
+.delete-btn{
+    position: absolute;
+    right: 5px;
+    bottom: 35px;
+    width: 30px;
+    height: 30px;
+}

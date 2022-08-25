@@ -34,5 +34,8 @@ export class FilmService {
   editFilm(filmId: number, value:any): Observable<any>{
     return this.http.patch(`${environment.apiUrl}/Sakila/Film/${filmId}`, value);
   }
+  deleteFilm(filmId: number): Observable<any> {
+    return this.http.delete(`${environment.apiUrl}/Sakila/Delete_Film_By_Id?filmId=${filmId}`)
+  }
  
 }

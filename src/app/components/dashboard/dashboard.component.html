@@ -13,7 +13,7 @@
                     <span *ngFor="let category of film.filmCategory; let last = last">{{ category.name }}
                     <span *ngIf="!last">,</span></span>
                 </p>
-                <img src="../../../assets/delete.jpg" class="delete-btn" (click)="goToPage('Delete')">
+                <img src="../../../assets/delete.jpg" class="delete-btn" (click)="removeFilm(film.filmId)">
                 <img src="../../../assets/edit.jpg" class="edit-btn" (click)="openEdit(film.filmId)">
                 <img src="../../../assets/add.jpg" class="add-btn" (click)="goToPage('Update')">
             </div>
