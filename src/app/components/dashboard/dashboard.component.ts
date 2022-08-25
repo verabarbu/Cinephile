@@ -18,7 +18,6 @@ export class DashboardComponent implements OnInit {
   constructor(private router: Router, private filmService: FilmService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    //this.searchFilms();
     this.routeSub = this.activatedRoute.params.subscribe((params) => {
       this.searchFilms(params['title']);
     });
@@ -33,15 +32,11 @@ export class DashboardComponent implements OnInit {
       this.films = response.data;
       console.log(response);
     });
-    /*this.filmSub = this.filmService.getFilmList(search).subscribe(
-      (response) => console.log(response),
-      (error: any) => console.log(error),
-      () => console.log("Done getting films"),
-    )*/
   }
-
   goToPage(pageName:string):void{
     this.router.navigate([`${pageName}`]);
   }
-
+  openEdit(id: number): void{
+    this.router.navigate(['Edit', id]);
+  }
 }

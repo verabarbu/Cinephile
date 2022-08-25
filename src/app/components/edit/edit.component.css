@@ -1,0 +1,52 @@
+.filmId-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1600px;
+    margin: 50px auto;
+}
+.edit-field{
+    background-color: #3e3d3d;
+    width: 800px;
+    margin: 10px;
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 20px;
+}
+.welcome{
+    color: black;
+    font-weight: 700;
+    font-size: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 15px auto;
+    text-align: center;
+}
+.label{
+    color: black;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.field{
+    width: 100%;
+    max-width: 1200;
+    padding: 10px;
+    outline: none;
+    border: 1px solid black;
+}
+.add-btn{
+    border: none;
+    outline: none;
+    background: #3e3d3d;
+    padding: 10px;
+    border: none;
+    color: white;
+    font-weight: 500;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    border: 1px solid black;
+}

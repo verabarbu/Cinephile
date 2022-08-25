@@ -10,6 +10,8 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { FilmComponent } from './components/film/film.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { UpdateComponent } from './components/update/update.component';
+import { EditComponent } from './components/edit/edit.component';
+import { DeleteComponent } from './components/delete/delete.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { UpdateComponent } from './components/update/update.component';
     SearchBarComponent,
     FilmComponent,
     DashboardComponent,
-    UpdateComponent
+    UpdateComponent,
+    EditComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,

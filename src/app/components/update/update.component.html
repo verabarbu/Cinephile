@@ -15,69 +15,63 @@
     </div>
 </div>
 
-<form class="theme-form" [formGroup]="filmForm" (ngSubmit)="onSubmit()">
-    <div class="form-row row">
-        <div class="col-md-6">
+<form [formGroup]="filmForm" (ngSubmit)="onSubmit()">
+    
+        <div>
             <label class="label" for="title">Title</label><br>
             <input class="field" formControlName="title" type="text" [(ngModel)]="film.title" name="title" placeholder="Please enter film title">
             <div *ngIf="filmForm.controls['title'].touched && filmForm.controls['title'].invalid">
                 <span *ngIf="filmForm.controls['title'].errors?.['required']">This field is mandatory.</span>
             </div><br><br>
         </div>
-    </div>
-    <div class="form-row row">
-        <div class="col-md-6">
+    
+        <div>
             <label class="label" for="description">Description</label><br>
             <input class="field" formControlName="description" type="text" [(ngModel)]="film.description" name="description" placeholder="Please enter film description">
             <div *ngIf="filmForm.controls['description'].touched && filmForm.controls['description'].invalid">
                 <span *ngIf="filmForm.controls['description'].errors?.['required']">This field is mandatory.</span>
             </div><br><br>
         </div>
-    </div>
-    <div class="form-row row">
-        <div class="col-md-6">
+    
+        <div>
             <label class="label" for="releaseYear">Release year</label><br>
             <input class="field" formControlName="releaseYear" type="text" [(ngModel)]="film.releaseYear" name="releaseYear" placeholder="Please enter film release year">
             <div *ngIf="filmForm.controls['releaseYear'].touched && filmForm.controls['releaseYear'].invalid">
                 <span *ngIf="filmForm.controls['releaseYear'].errors?.['required']">This field is mandatory.</span>
             </div><br><br>
         </div>
-    </div>
-    <div class="form-row row">
-        <div class="col-md-6">
+    
+        <div>
             <label class="label" for="languageId">Language id</label><br>
             <input class="field" formControlName="languageId" type="text" [(ngModel)]="film.languageId" name="languageId" placeholder="Please enter film language id">
             <div *ngIf="filmForm.controls['languageId'].touched && filmForm.controls['languageId'].invalid">
                 <span *ngIf="filmForm.controls['languageId'].errors?.['required']">This field is mandatory.</span>
             </div><br><br>
         </div>
-    </div>
-    <div class="form-row row">
-        <div class="col-md-6">
+    
+        <div>
             <label class="label" for="originalLanguageId">Original language id</label><br>
             <input class="field" formControlName="originalLanguageId" type="text" [(ngModel)]="film.originalLanguageId" name="originalLanguageId" placeholder="Please enter film oriiginal language id">
             <div *ngIf="filmForm.controls['originalLanguageId'].touched && filmForm.controls['originalLanguageId'].invalid">
                 <span *ngIf="filmForm.controls['originalLanguageId'].errors?.['required']">This field is mandatory.</span>
             </div><br><br>
         </div>
-    </div>
-    <div class="form-row row">
-        <div class="col-md-6">
+    
+        <div>
             <label class="label" for="length">Length</label><br>
             <input class="field" formControlName="length" type="text" [(ngModel)]="film.length" name="length" placeholder="Please enter film length">
             <div *ngIf="filmForm.controls['length'].touched && filmForm.controls['length'].invalid">
                 <span *ngIf="filmForm.controls['length'].errors?.['required']">This field is mandatory.</span>
             </div><br><br>
         </div>
-    </div>
-    <div class="form-row row">
-        <div class="col-md-6">
+    
+        <div>
             <label class="label" for="rating">Rating</label><br>
             <input class="field" formControlName="rating" type="text" [(ngModel)]="film.rating" name="rating" placeholder="Please enter film rating">
             <div *ngIf="filmForm.controls['rating'].touched && filmForm.controls['rating'].invalid">
                 <span *ngIf="filmForm.controls['rating'].errors?.['required']">This field is mandatory.</span>
             </div><br><br>
-        </div>
+        
     </div>
     <button class="add-btn" type="submit" [disabled]="!filmForm.valid">Add</button>
 </form>

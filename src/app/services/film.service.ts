@@ -12,7 +12,6 @@ import { APIResponse } from '../interfaces/http';
 export class FilmService {
 
   private apiUrl = environment.apiUrl;
-  //url: string = 'http://localhost:3000/data';
 
   constructor(private http: HttpClient) { }
 
@@ -29,15 +28,11 @@ export class FilmService {
     return this.http.get<Film>(`${environment.apiUrl}/Sakila/Get_Film_By_Id?filmId=${filmId}`);
   }
 
-  // getFilms(): Observable<Film[]>{
-  //   return this.http.get<Film[]>(`${this.apiUrl}/data`);
-  // }
-  // getFilm(): Observable<Film>{
-  //   return this.http.get<Film>(`${this.apiUrl}/data/1`);
-  // }
-
   createNewFilm(data: any): Observable<any>{
     return this.http.post(`${environment.apiUrl}/Sakila/Add_New_Film`, data);
+  }
+  editFilm(filmId: number, value:any): Observable<any>{
+    return this.http.patch(`${environment.apiUrl}/Sakila/Film/${filmId}`, value);
   }
  
 }

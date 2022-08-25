@@ -34,6 +34,7 @@
     flex-direction: column;
     justify-content: left;
     height: 157px;
+    position: relative;
 }
 .film-title{
     color: white;
@@ -49,18 +50,25 @@
 .film-rating {
     color: black;
 }
-.floating-left-bottom-btn
-{
-position : absolute;
-left : 10px;
-top : 90px;
-outline: none;
-background: #3e3d3d;
-padding: 10px;
-border: none;
-color: white;
-font-weight: 500;
-transition-duration: 0.3s;
-cursor: pointer;
-border: 1px solid black;
+.delete-btn{
+    position: absolute;
+    right: 5px;
+    bottom: 35px;
+    width: 30px;
+    height: 30px;
 }
+.edit-btn{
+    position: absolute;
+    right: 40px;
+    bottom: 35px;
+    width: 30px;
+    height: 30px;
+}
+.add-btn{
+    position: absolute;
+    right: 75px;
+    bottom: 35px;
+    width: 30px;
+    height: 30px;
+}
+    

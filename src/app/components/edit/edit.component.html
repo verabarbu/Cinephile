@@ -1,0 +1,46 @@
+<div class="filmId-container content">
+    <div class="edit-field">
+<h2 class="welcome">Edit latest information!</h2>
+    
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+
+        <div>
+            <label class="label" for="title">Title</label><br>
+            <input class="field" type="text" formControlName="title" [(ngModel)]="film.title"><br><br>
+        </div>
+
+        <div>
+            <label class="label" for="description">Description</label><br>
+            <input class="field" type="text" formControlName="description" [(ngModel)]="film.description"><br><br>
+        </div>
+
+        <div>
+            <label class="label" for="releaseYear">Release year</label><br>
+            <input class="field" type="text" formControlName="releaseYear" [(ngModel)]="film.releaseYear"><br><br>
+        </div>
+
+        <div>
+            <label class="label" for="languageId">Language id</label><br>
+            <input class="field" type="text" formControlName="languageId" [(ngModel)]="film.languageId"><br><br>
+        </div>
+
+        <div>
+            <label class="label" for="originalLanguageId">Original language id</label><br>
+            <input class="field" type="text" formControlName="originalLanguageId" [(ngModel)]="film.originalLanguageId"><br><br>
+        </div>
+
+        <div>
+            <label class="label" for="length">Length</label><br>
+            <input class="field" type="text" formControlName="length" [(ngModel)]="film.length"><br><br>
+        </div>
+
+        <div>
+            <label class="label" for="rating">Rating</label><br>
+            <input class="field" type="text" formControlName="rating" [(ngModel)]="film.rating"><br><br>
+        </div>
+
+        <button type="submit" class="add-btn" (click)="onSubmit()">Submit</button>
+    </form>
+    
+    </div>
+</div>

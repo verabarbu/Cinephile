@@ -1,7 +1,7 @@
 <div class="film-container content">
     <ng-container *ngFor="let film of films">
-        <div class="film" (click)="openFilm(film.filmId)">
-            <div class="film-thumb-container">
+        <div class="film">
+            <div class="film-thumb-container" (click)="openFilm(film.filmId)">
                 <img src="https://picsum.photos/seed/{{film.filmId}}/300"
                 alt="thumbnail"
                 class="film-thumbnail"/>
@@ -13,8 +13,11 @@
                     <span *ngFor="let category of film.filmCategory; let last = last">{{ category.name }}
                     <span *ngIf="!last">,</span></span>
                 </p>
+                <img src="../../../assets/delete.jpg" class="delete-btn" (click)="goToPage('Delete')">
+                <img src="../../../assets/edit.jpg" class="edit-btn" (click)="openEdit(film.filmId)">
+                <img src="../../../assets/add.jpg" class="add-btn" (click)="goToPage('Update')">
             </div>
         </div>
     </ng-container>
 </div>
-<button class="floating-left-bottom-btn" (click)="goToPage('Update')">Update your favourite!</button>
+
