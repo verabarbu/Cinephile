@@ -23,7 +23,7 @@
     </p>
     <h4 class="unit-title">Categories:</h4>
     <p *ngIf="film.filmCategory">
-        <span *ngFor="let category of film.filmCategory, let last = last">{{ category.name }}<span *ngId="!last">, </span></span> 
+        <span *ngFor="let category of film.filmCategory, let last = last">{{ category.name }}<span *ngIf="!last">, </span></span> 
 
     </p>
 </div>
